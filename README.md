@@ -28,14 +28,6 @@ npm install
 ### Change Colors (if needed)
 Edit: `lib/constants/colors.ts` and `tailwind.config.ts`
 
-### Update Content
-Each section is in: `components/sections/`
-- Hero.tsx
-- WhyOxygenix.tsx
-- ProductCategories.tsx
-- etc.
-
----
 
 ## 📱 Mobile Testing
 
