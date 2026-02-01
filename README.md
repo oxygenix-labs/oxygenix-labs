@@ -28,16 +28,6 @@ npm install
 ### Change Colors (if needed)
 Edit: `lib/constants/colors.ts` and `tailwind.config.ts`
 
-
-## 📱 Mobile Testing
-
-The website is mobile-first. Test on:
-- Chrome DevTools (F12 → Toggle Device Toolbar)
-- Actual mobile devices
-- Different screen sizes
-
----
-
 ## 🔧 Troubleshooting
 
 ### Port Already in Use
