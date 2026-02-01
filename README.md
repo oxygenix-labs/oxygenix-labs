@@ -36,12 +36,12 @@ If port 3000 is busy:
 npm run dev -- -p 3001
 ```
 
-<!-- ### Dependencies Issues
+### Dependencies Issues
 ```bash
 # Clean install
 rm -rf node_modules package-lock.json
 npm install
-``` -->
+```
 
 ---
 
