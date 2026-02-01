@@ -1,0 +1,107 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Brand Colors */
+    --color-text-light: #ffffff;
+    --color-text-dark: #1e293b;
+
+    /* Primary Gradients - Light */
+    --gradient-primary-light-start: #a78bfa;
+    --gradient-primary-light-mid: #ec4899;
+    --gradient-primary-light-end: #f472b6;
+
+    /* Primary Gradients - Dark */
+    --gradient-primary-dark-start: #8b5cf6;
+    --gradient-primary-dark-mid: #d946ef;
+    --gradient-primary-dark-end: #ec4899;
+
+    /* Neutral Colors */
+    --color-bg-primary: #ffffff;
+    --color-bg-secondary: #f8fafc;
+    --color-bg-tertiary: #f1f5f9;
+    --color-border: #e2e8f0;
+  }
+
+
+  body {
+
+    @apply bg-white text-slate-800 antialiased;
+    font-feature-settings: 'rlig' 1, 'calt' 1;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer components {
+
+  /* Gradient Text Utility */
+  .gradient-text {
+    @apply bg-gradient-primary-light bg-clip-text text-transparent;
+  }
+
+  /* Premium Container */
+  .container-premium {
+    @apply mx-auto max-w-7xl px-4 sm:px-6 lg:px-8;
+  }
+
+  /* Section Spacing */
+  .section-padding {
+    @apply py-16 sm:py-20 lg:py-24;
+  }
+
+  /* Glass Effect */
+  .glass {
+    @apply bg-white/80 backdrop-blur-lg border border-white/20;
+  }
+
+  /* Smooth Transitions */
+  .transition-smooth {
+    @apply transition-all duration-300 ease-out;
+  }
+}
+
+@layer utilities {
+
+  /* Text Balance */
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  /* Hide Scrollbar */
+  .hide-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  .hide-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
+
+/* Custom Animations */
+@keyframes gradient-shift {
+
+  0%,
+  100% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+.animate-gradient {
+  background-size: 200% 200%;
+  animation: gradient-shift 8s ease infinite;
+}
+
+/* Focus Visible Styles */
+*:focus-visible {
+  @apply outline-none ring-2 ring-brand-purple ring-offset-2;
+}
