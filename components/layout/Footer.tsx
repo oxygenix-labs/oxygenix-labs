@@ -32,7 +32,6 @@ export default function Footer() {
         <footer className="bg-slate-900 text-white">
             <div className="container-premium section-padding">
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 lg:gap-12">
-                    {/* Brand */}
                     <div className="lg:col-span-2">
                         <div className="flex items-center gap-2 mb-4">
                             <div className="w-10 h-10 bg-gradient-primary-light rounded-lg flex items-center justify-center">
