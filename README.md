@@ -6,7 +6,6 @@
 
 ### Start Development Server
 ```bash
-cd c:\Users\CS\Desktop\oxygenix-labs
 npm run dev
 ```
 
