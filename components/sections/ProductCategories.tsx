@@ -76,16 +76,7 @@ export default function ProductCategories() {
                                             viewport={{ once: true }}
                                             transition={{ duration: 0.5, delay: productIndex * 0.1 }}
                                         >
-                                            <ProductCard
-                                                name={product.name}
-                                                slug={product.slug}
-                                                category={product.categoryLabel}
-                                                coverage={product.variants[0].coverage}
-                                                image={product.image}
-                                                description={product.shortDescription}
-                                                price={`₹${(product.variants[0].price / 1000).toFixed(0)}k`}
-                                                variants={product.variants.length}
-                                            />
+                                            <ProductCard product={product} />
                                         </motion.div>
                                     ))}
                                 </div>

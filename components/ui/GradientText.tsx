@@ -1,32 +1,14 @@
-import React from 'react';
-import { clsx } from 'clsx';
+import React, { ReactNode } from 'react';
 
 interface GradientTextProps {
-    children: React.ReactNode;
-    variant?: 'light' | 'dark';
+    children: ReactNode;
     className?: string;
-    as?: 'h1' | 'h2' | 'h3' | 'h4' | 'p' | 'span';
 }
 
-export default function GradientText({
-    children,
-    variant = 'light',
-    className,
-    as: Component = 'span',
-}: GradientTextProps) {
-    const gradientClass = variant === 'light'
-        ? 'bg-gradient-primary-light'
-        : 'bg-gradient-primary-dark';
-
+export default function GradientText({ children, className = '' }: GradientTextProps) {
     return (
-        <Component
-            className={clsx(
-                gradientClass,
-                'bg-clip-text text-transparent',
-                className
-            )}
-        >
+        <span className={`bg-gradient-to-r from-oxygen-700 to-fresh-600 bg-clip-text text-transparent ${className}`}>
             {children}
-        </Component>
+        </span>
     );
 }

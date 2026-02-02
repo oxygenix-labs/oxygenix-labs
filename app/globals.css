@@ -4,104 +4,320 @@
 
 @layer base {
   :root {
-    /* Brand Colors */
-    --color-text-light: #ffffff;
-    --color-text-dark: #1e293b;
+    /* ============================================
+       OXYGENIX LABS - GREEN OXYGEN COLOR SYSTEM
+       Professional • Clean Air • Infrastructure
+       ============================================ */
 
-    /* Primary Gradients - Light */
-    --gradient-primary-light-start: #a78bfa;
-    --gradient-primary-light-mid: #ec4899;
-    --gradient-primary-light-end: #f472b6;
+    /* PRIMARY OXYGEN GREEN - Rich, cool-toned, professional */
+    --color-oxygen-900: 6 78 59;
+    /* Deep forest green - #064e3b */
+    --color-oxygen-800: 5 102 79;
+    /* Rich oxygen green - #05664f */
+    --color-oxygen-700: 4 120 87;
+    /* Primary brand green - #047857 */
+    --color-oxygen-600: 5 150 105;
+    /* Fresh oxygen - #059669 */
+    --color-oxygen-500: 16 185 129;
+    /* Vibrant green - #10b981 */
+    --color-oxygen-400: 52 211 153;
+    /* Light oxygen - #34d399 */
 
-    /* Primary Gradients - Dark */
-    --gradient-primary-dark-start: #8b5cf6;
-    --gradient-primary-dark-mid: #d946ef;
-    --gradient-primary-dark-end: #ec4899;
+    /* SECONDARY FRESH GREEN - Soft, breathable, calm */
+    --color-fresh-900: 20 83 45;
+    /* Deep fresh - #14532d */
+    --color-fresh-800: 22 101 52;
+    /* Dark fresh - #166534 */
+    --color-fresh-700: 21 128 61;
+    /* Medium fresh - #15803d */
+    --color-fresh-600: 34 197 94;
+    /* Bright fresh - #22c55e */
+    --color-fresh-500: 74 222 128;
+    /* Light fresh - #4ade80 */
+    --color-fresh-400: 134 239 172;
+    /* Pale fresh - #86efac */
 
-    /* Neutral Colors */
-    --color-bg-primary: #ffffff;
-    --color-bg-secondary: #f8fafc;
-    --color-bg-tertiary: #f1f5f9;
-    --color-border: #e2e8f0;
+    /* TEAL ACCENT - Optional cool complement */
+    --color-teal-700: 15 118 110;
+    /* Deep teal - #0f766e */
+    --color-teal-600: 13 148 136;
+    /* Medium teal - #0d9488 */
+    --color-teal-500: 20 184 166;
+    /* Bright teal - #14b8a6 */
+
+    /* NEUTRALS - Clean, professional, spacious */
+    --color-slate-50: 248 250 252;
+    /* Off-white background */
+    --color-slate-100: 241 245 249;
+    /* Light background */
+    --color-slate-200: 226 232 240;
+    /* Subtle borders */
+    --color-slate-300: 203 213 225;
+    /* Light borders */
+    --color-slate-400: 148 163 184;
+    /* Muted text */
+    --color-slate-500: 100 116 139;
+    /* Secondary text */
+    --color-slate-600: 71 85 105;
+    /* Body text */
+    --color-slate-700: 51 65 85;
+    /* Dark text */
+    --color-slate-800: 30 41 59;
+    /* Heading text */
+    --color-slate-900: 15 23 42;
+    /* Primary text */
+
+    /* ACCENT - Minimal use only */
+    --color-accent-blue: 59 130 246;
+    /* Trust blue - #3b82f6 */
+    --color-accent-amber: 245 158 11;
+    /* Warning amber - #f59e0b */
+
+    /* SEMANTIC COLORS */
+    --color-success: 34 197 94;
+    /* Success green - #22c55e */
+    --color-warning: 245 158 11;
+    /* Warning amber - #f59e0b */
+    --color-error: 239 68 68;
+    /* Error red - #ef4444 */
+    --color-info: 59 130 246;
+    /* Info blue - #3b82f6 */
+
+    /* GRADIENTS - Green-forward, professional */
+    --gradient-primary: linear-gradient(135deg, rgb(4 120 87) 0%, rgb(16 185 129) 100%);
+    --gradient-primary-light: linear-gradient(135deg, rgb(5 150 105) 0%, rgb(52 211 153) 100%);
+    --gradient-fresh: linear-gradient(135deg, rgb(21 128 61) 0%, rgb(74 222 128) 100%);
+    --gradient-oxygen-teal: linear-gradient(135deg, rgb(4 120 87) 0%, rgb(13 148 136) 100%);
+    --gradient-subtle: linear-gradient(135deg, rgb(241 245 249) 0%, rgb(226 232 240) 100%);
+
+    /* SHADOWS - Soft, professional */
+    --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+    --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+    --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+    --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+    --shadow-oxygen: 0 10px 30px -5px rgb(4 120 87 / 0.2);
   }
 
+  /* Dark mode (optional - for future use) */
+  .dark {
+    --color-slate-50: 15 23 42;
+    --color-slate-900: 248 250 252;
+  }
+
+  * {
+    @apply border-slate-200;
+  }
 
   body {
-
-    @apply bg-white text-slate-800 antialiased;
+    @apply bg-white text-slate-900 antialiased;
     font-feature-settings: 'rlig' 1, 'calt' 1;
   }
 
+  /* Smooth scrolling */
   html {
     scroll-behavior: smooth;
   }
 }
 
 @layer components {
+  /* ============================================
+     UTILITY CLASSES - GREEN OXYGEN SYSTEM
+     ============================================ */
 
-  /* Gradient Text Utility */
-  .gradient-text {
-    @apply bg-gradient-primary-light bg-clip-text text-transparent;
-  }
-
-  /* Premium Container */
+  /* Container with premium spacing */
   .container-premium {
-    @apply mx-auto max-w-7xl px-4 sm:px-6 lg:px-8;
+    @apply max-w-7xl mx-auto px-6 lg:px-8;
   }
 
-  /* Section Spacing */
+  /* Section padding */
   .section-padding {
-    @apply py-16 sm:py-20 lg:py-24;
+    @apply py-16 md:py-24 lg:py-32;
   }
 
-  /* Glass Effect */
-  .glass {
-    @apply bg-white/80 backdrop-blur-lg border border-white/20;
+  /* Primary Oxygen Gradient */
+  .bg-gradient-oxygen {
+    background: var(--gradient-primary);
   }
 
-  /* Smooth Transitions */
-  .transition-smooth {
-    @apply transition-all duration-300 ease-out;
+  .bg-gradient-oxygen-light {
+    background: var(--gradient-primary-light);
+  }
+
+  .bg-gradient-fresh {
+    background: var(--gradient-fresh);
+  }
+
+  .bg-gradient-oxygen-teal {
+    background: var(--gradient-oxygen-teal);
+  }
+
+  /* Text gradients */
+  .text-gradient-oxygen {
+    @apply bg-gradient-to-r from-oxygen-700 to-oxygen-500 bg-clip-text text-transparent;
+  }
+
+  .text-gradient-fresh {
+    @apply bg-gradient-to-r from-fresh-700 to-fresh-500 bg-clip-text text-transparent;
+  }
+
+  /* Oxygen glow effect (use sparingly) */
+  .oxygen-glow {
+    box-shadow: 0 0 20px rgb(16 185 129 / 0.3);
+  }
+
+  /* Card styles */
+  .card {
+    @apply bg-white rounded-xl border border-slate-200 shadow-md;
+  }
+
+  .card-hover {
+    @apply card transition-all duration-300 hover:shadow-lg hover:border-oxygen-200;
+  }
+
+  /* Button base */
+  .btn {
+    @apply px-6 py-3 rounded-lg font-semibold transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2;
+  }
+
+  .btn-oxygen {
+    @apply btn bg-oxygen-700 text-white hover:bg-oxygen-800 focus:ring-oxygen-500;
+  }
+
+  .btn-fresh {
+    @apply btn bg-fresh-600 text-white hover:bg-fresh-700 focus:ring-fresh-500;
+  }
+
+  .btn-outline-oxygen {
+    @apply btn border-2 border-oxygen-700 text-oxygen-700 hover:bg-oxygen-50 focus:ring-oxygen-500;
+  }
+
+  /* Status badges */
+  .badge-oxygen {
+    @apply px-3 py-1 bg-oxygen-100 text-oxygen-800 rounded-full text-xs font-semibold;
+  }
+
+  .badge-fresh {
+    @apply px-3 py-1 bg-fresh-100 text-fresh-800 rounded-full text-xs font-semibold;
+  }
+
+  .badge-success {
+    @apply px-3 py-1 bg-green-100 text-green-800 rounded-full text-xs font-semibold;
+  }
+
+  /* Air quality indicators */
+  .air-quality-excellent {
+    @apply bg-fresh-500 text-white;
+  }
+
+  .air-quality-good {
+    @apply bg-oxygen-500 text-white;
+  }
+
+  .air-quality-moderate {
+    @apply bg-yellow-500 text-white;
+  }
+
+  .air-quality-poor {
+    @apply bg-orange-500 text-white;
+  }
+
+  /* Oxygen pulse animation */
+  @keyframes oxygen-pulse {
+
+    0%,
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+
+    50% {
+      opacity: 0.8;
+      transform: scale(1.05);
+    }
+  }
+
+  .animate-oxygen-pulse {
+    animation: oxygen-pulse 2s ease-in-out infinite;
+  }
+
+  /* Breathe animation (subtle) */
+  @keyframes breathe {
+
+    0%,
+    100% {
+      opacity: 0.6;
+    }
+
+    50% {
+      opacity: 1;
+    }
+  }
+
+  .animate-breathe {
+    animation: breathe 3s ease-in-out infinite;
   }
 }
 
 @layer utilities {
 
-  /* Text Balance */
+  /* Custom scrollbar - oxygen themed */
+  .scrollbar-oxygen::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+
+  .scrollbar-oxygen::-webkit-scrollbar-track {
+    @apply bg-slate-100;
+  }
+
+  .scrollbar-oxygen::-webkit-scrollbar-thumb {
+    @apply bg-oxygen-400 rounded-full;
+  }
+
+  .scrollbar-oxygen::-webkit-scrollbar-thumb:hover {
+    @apply bg-oxygen-500;
+  }
+
+  /* Text balance for headings */
   .text-balance {
     text-wrap: balance;
   }
 
-  /* Hide Scrollbar */
-  .hide-scrollbar::-webkit-scrollbar {
-    display: none;
-  }
-
-  .hide-scrollbar {
-    -ms-overflow-style: none;
-    scrollbar-width: none;
+  /* Backdrop blur utilities */
+  .backdrop-blur-oxygen {
+    backdrop-filter: blur(12px);
+    background-color: rgb(255 255 255 / 0.8);
   }
 }
 
-/* Custom Animations */
-@keyframes gradient-shift {
-
-  0%,
-  100% {
-    background-position: 0% 50%;
-  }
-
-  50% {
-    background-position: 100% 50%;
-  }
-}
-
-.animate-gradient {
-  background-size: 200% 200%;
-  animation: gradient-shift 8s ease infinite;
-}
-
-/* Focus Visible Styles */
-*:focus-visible {
-  @apply outline-none ring-2 ring-brand-purple ring-offset-2;
-}
+/* ============================================
+   CUSTOM OXYGEN BRAND COLORS FOR TAILWIND
+   Add to tailwind.config.js:
+   
+   colors: {
+     oxygen: {
+       50: '#f0fdf4',
+       100: '#dcfce7',
+       200: '#bbf7d0',
+       300: '#86efac',
+       400: '#34d399',
+       500: '#10b981',
+       600: '#059669',
+       700: '#047857',
+       800: '#05664f',
+       900: '#064e3b',
+     },
+     fresh: {
+       50: '#f0fdf4',
+       100: '#dcfce7',
+       200: '#bbf7d0',
+       300: '#86efac',
+       400: '#4ade80',
+       500: '#22c55e',
+       600: '#16a34a',
+       700: '#15803d',
+       800: '#166534',
+       900: '#14532d',
+     }
+   }
+   ============================================ */
