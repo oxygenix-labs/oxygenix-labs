@@ -1,181 +1,163 @@
 'use client';
 
-import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import SectionHeader from '@/components/ui/SectionHeader';
+import React from 'react';
+import { motion } from 'framer-motion';
 
 export default function HowItWorks() {
-    const [activeMode, setActiveMode] = useState<'day' | 'night'>('day');
-
     const steps = [
         {
-            number: 1,
+            number: '1',
             title: 'Air Intake',
-            description: 'Polluted air enters through optimized intake vents',
+            description: 'Fan draws indoor air into filtration chamber',
             icon: (
                 <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 16V4m0 0L3 8m4-4l4 4m6 0v12m0 0l4-4m-4 4l-4-4" />
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
                 </svg>
             ),
         },
         {
-            number: 2,
-            title: 'PM2.5 Removed',
-            description: 'HEPA H13 filter captures 99.97% of particles',
+            number: '2',
+            title: 'Filtration',
+            description: 'HEPA H13 removes 99.97% of particles ≥0.3μm',
             icon: (
                 <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 4a1 1 0 011-1h16a1 1 0 011 1v2.586a1 1 0 01-.293.707l-6.414 6.414a1 1 0 00-.293.707V17l-4 4v-6.586a1 1 0 00-.293-.707L3.293 7.293A1 1 0 013 6.586V4z" />
                 </svg>
             ),
         },
         {
-            number: 3,
-            title: 'CO₂ Absorbed',
-            description: 'Algae bioreactor absorbs carbon dioxide',
+            number: '3',
+            title: 'Algae Chamber',
+            description: 'Chlorella culture produces O₂ via photosynthesis',
             icon: (
                 <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
                 </svg>
             ),
         },
         {
-            number: 4,
-            title: 'Oxygen Released',
-            description: 'Fresh, oxygen-enriched air circulates back',
+            number: '4',
+            title: 'Air Output',
+            description: 'Filtered air released back into room',
             icon: (
                 <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 10h4.764a2 2 0 011.789 2.894l-3.5 7A2 2 0 0115.263 21h-4.017c-.163 0-.326-.02-.485-.06L7 20m7-10V5a2 2 0 00-2-2h-.095c-.5 0-.905.405-.905.905 0 .714-.211 1.412-.608 2.006L7 11v9m7-10h-2M7 20H5a2 2 0 01-2-2v-6a2 2 0 012-2h2.5" />
-                </svg>
-            ),
-        },
-        {
-            number: 5,
-            title: 'Smart Optimization',
-            description: 'Sensors continuously monitor and adjust',
-            icon: (
-                <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
                 </svg>
             ),
         },
     ];
 
+    const specs = [
+        { label: 'Filtration Efficiency', value: '99.97% of PM2.5' },
+        { label: 'Oxygen Generation', value: 'Natural photosynthesis' },
+        { label: 'Coverage Area', value: '200-1500 sq ft' },
+        { label: 'Noise Level', value: '<35 dB (library-quiet)' },
+    ];
+
     return (
-        <section id="how-it-works" className="section-padding bg-white">
+        <section className="section-padding bg-white">
             <div className="container-premium">
-                <SectionHeader
-                    title="How It Works"
-                    description="Five-stage process for oxygen-positive environments"
-                    gradient
-                />
+                {/* Section Header */}
+                <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.6 }}
+                    className="text-center mb-16"
+                >
+                    <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-4">
+                        System
+                        <br />
+                        <span className="bg-gradient-to-r from-oxygen-700 to-fresh-600 bg-clip-text text-transparent">
+                            Operation
+                        </span>
+                    </h2>
+                    <p className="text-xl text-slate-600 max-w-3xl mx-auto">
+                        Four-stage process: mechanical filtration, algae photosynthesis, air quality monitoring.
+                    </p>
+                </motion.div>
 
-                {/* Day/Night Toggle */}
-                <div className="flex justify-center mb-12">
-                    <div className="inline-flex bg-slate-100 rounded-full p-1">
-                        <button
-                            onClick={() => setActiveMode('day')}
-                            className={`px-6 py-2 rounded-full font-medium transition-all ${activeMode === 'day'
-                                    ? 'bg-white text-slate-900 shadow-md'
-                                    : 'text-slate-600'
-                                }`}
-                        >
-                            ☀️ Day Mode
-                        </button>
-                        <button
-                            onClick={() => setActiveMode('night')}
-                            className={`px-6 py-2 rounded-full font-medium transition-all ${activeMode === 'night'
-                                    ? 'bg-white text-slate-900 shadow-md'
-                                    : 'text-slate-600'
-                                }`}
-                        >
-                            🌙 Night Mode
-                        </button>
-                    </div>
-                </div>
-
-                {/* Mode Description */}
-                <AnimatePresence mode="wait">
-                    <motion.div
-                        key={activeMode}
-                        initial={{ opacity: 0, y: 10 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        exit={{ opacity: 0, y: -10 }}
-                        className="text-center mb-12 max-w-2xl mx-auto"
-                    >
-                        {activeMode === 'day' ? (
-                            <p className="text-lg text-slate-600">
-                                During daylight, algae photosynthesis is at peak efficiency, generating maximum oxygen while the HEPA system continuously cleans the air.
-                            </p>
-                        ) : (
-                            <p className="text-lg text-slate-600">
-                                At night, the system switches to optimized mode. While algae oxygen production reduces, stored oxygen reserves and enhanced air circulation maintain air quality.
-                            </p>
-                        )}
-                    </motion.div>
-                </AnimatePresence>
-
-                {/* Process Steps */}
-                <div className="relative">
-                    {/* Connection Line */}
-                    <div className="hidden lg:block absolute top-1/2 left-0 right-0 h-1 bg-gradient-primary-light transform -translate-y-1/2 opacity-20" />
-
-                    <div className="grid md:grid-cols-3 lg:grid-cols-5 gap-8">
+                {/* Process Flow */}
+                <div className="mb-16">
+                    <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
                         {steps.map((step, index) => (
                             <motion.div
-                                key={step.number}
+                                key={index}
                                 initial={{ opacity: 0, y: 20 }}
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
-                                transition={{ duration: 0.5, delay: index * 0.1 }}
+                                transition={{ duration: 0.4, delay: index * 0.1 }}
                                 className="relative"
                             >
-                                {/* Step Card */}
-                                <div className="bg-white rounded-2xl p-6 border-2 border-slate-200 hover:border-brand-purple transition-all hover:shadow-lg">
-                                    {/* Number Badge */}
-                                    <div className="w-12 h-12 bg-gradient-primary-light rounded-full flex items-center justify-center text-white font-bold text-lg mb-4 mx-auto">
+                                <div className="bg-slate-50 rounded-2xl border-2 border-slate-200 p-6 hover:border-oxygen-300 transition-all h-full">
+                                    {/* Step Number */}
+                                    <div className="w-12 h-12 bg-gradient-oxygen rounded-full flex items-center justify-center text-white text-xl font-bold mb-4">
                                         {step.number}
                                     </div>
 
                                     {/* Icon */}
-                                    <div className="flex justify-center mb-4 text-brand-purple">
+                                    <div className="w-16 h-16 bg-white rounded-xl flex items-center justify-center text-oxygen-700 mb-4 border border-slate-200">
                                         {step.icon}
                                     </div>
 
                                     {/* Content */}
-                                    <h4 className="font-bold text-slate-900 text-center mb-2">
-                                        {step.title}
-                                    </h4>
-                                    <p className="text-sm text-slate-600 text-center">
-                                        {step.description}
-                                    </p>
+                                    <h3 className="text-lg font-bold text-slate-900 mb-2">{step.title}</h3>
+                                    <p className="text-sm text-slate-600">{step.description}</p>
                                 </div>
+
+                                {/* Arrow (Desktop only) */}
+                                {index < steps.length - 1 && (
+                                    <div className="hidden md:block absolute top-1/2 -right-3 transform -translate-y-1/2 z-10">
+                                        <svg className="w-6 h-6 text-oxygen-700" fill="currentColor" viewBox="0 0 20 20">
+                                            <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd" />
+                                        </svg>
+                                    </div>
+                                )}
                             </motion.div>
                         ))}
                     </div>
                 </div>
 
-                {/* Technical Specs */}
-                <div className="mt-16 grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-                    {[
-                        { label: 'PM2.5 Removal', value: '99.97%', icon: '🎯' },
-                        { label: 'Oxygen Boost', value: '15-20%', icon: '💨' },
-                        { label: 'CO₂ Reduction', value: '25-30%', icon: '🌱' },
-                        { label: 'Coverage', value: 'Up to 1500 sq ft', icon: '📐' },
-                    ].map((spec, index) => (
-                        <motion.div
-                            key={spec.label}
-                            initial={{ opacity: 0, scale: 0.95 }}
-                            whileInView={{ opacity: 1, scale: 1 }}
-                            viewport={{ once: true }}
-                            transition={{ duration: 0.5, delay: index * 0.1 }}
-                            className="bg-gradient-to-br from-slate-50 to-white rounded-xl p-6 border border-slate-200 text-center"
-                        >
-                            <div className="text-3xl mb-2">{spec.icon}</div>
-                            <div className="text-2xl font-bold text-slate-900 mb-1">{spec.value}</div>
-                            <div className="text-sm text-slate-600">{spec.label}</div>
-                        </motion.div>
-                    ))}
-                </div>
+                {/* Technical Specifications */}
+                <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.6 }}
+                    className="bg-gradient-to-br from-slate-50 to-slate-100 rounded-2xl p-8 md:p-12"
+                >
+                    <h3 className="text-2xl font-bold text-slate-900 mb-8 text-center">Technical Specifications</h3>
+
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                        {specs.map((spec, index) => (
+                            <motion.div
+                                key={index}
+                                initial={{ opacity: 0, scale: 0.9 }}
+                                whileInView={{ opacity: 1, scale: 1 }}
+                                viewport={{ once: true }}
+                                transition={{ duration: 0.4, delay: index * 0.1 }}
+                                className="bg-white rounded-xl p-6 border-2 border-slate-200 text-center"
+                            >
+                                <div className="text-sm text-slate-600 mb-2">{spec.label}</div>
+                                <div className="text-lg font-bold text-oxygen-700">{spec.value}</div>
+                            </motion.div>
+                        ))}
+                    </div>
+
+                    <div className="mt-8 p-6 bg-blue-50 border border-blue-200 rounded-xl">
+                        <div className="flex items-start gap-4">
+                            <svg className="w-6 h-6 text-blue-700 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                                <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clipRule="evenodd" />
+                            </svg>
+                            <div>
+                                <h4 className="font-bold text-slate-900 mb-1">Algae photosynthesis process</h4>
+                                <p className="text-sm text-slate-700">
+                                    Algae converts CO₂ and water into oxygen and glucose using light energy. System maintains temperature and light conditions for continuous operation.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </motion.div>
             </div>
         </section>
     );

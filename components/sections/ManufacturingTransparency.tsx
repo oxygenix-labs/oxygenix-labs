@@ -82,14 +82,14 @@ export default function ManufacturingTransparency() {
                     className="text-center mb-16"
                 >
                     <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-4">
-                        Manufacturing
+                        Manufacturing and
                         <br />
                         <span className="bg-gradient-to-r from-oxygen-700 to-fresh-600 bg-clip-text text-transparent">
-                            Built with Precision
+                            Quality Control
                         </span>
                     </h2>
                     <p className="text-xl text-slate-600 max-w-3xl mx-auto">
-                        Every product is manufactured in our Bangalore facility with rigorous quality control at every step.
+                        Bangalore facility. 15,000 sq ft production capacity. ISO 9001:2015 certified.
                     </p>
                 </motion.div>
 
@@ -202,9 +202,9 @@ export default function ManufacturingTransparency() {
                                 <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clipRule="evenodd" />
                             </svg>
                             <div>
-                                <h4 className="font-bold text-slate-900 mb-1">Want to Visit Our Facility?</h4>
+                                <h4 className="font-bold text-slate-900 mb-1">Facility Tours Available</h4>
                                 <p className="text-sm text-slate-700">
-                                    We welcome corporate buyers, institutional clients, and partners to visit our manufacturing facility. Schedule a tour to see our quality processes firsthand.
+                                    Corporate buyers and institutional clients can schedule facility tours. Contact sales for arrangements.
                                 </p>
                             </div>
                         </div>

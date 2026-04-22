@@ -125,10 +125,10 @@ export default function Header() {
     }, []);
 
     const navLinks = [
-        { href: '#products', label: 'Products' },
-        { href: '#how-it-works', label: 'How It Works' },
-        { href: '#use-cases', label: 'Use Cases' },
-        { href: '#about', label: 'About' },
+        { href: '/products', label: 'Products' },
+        { href: '/blog', label: 'Blog' },
+        { href: '/about', label: 'About' },
+        { href: '/contact', label: 'Contact' },
     ];
 
     return (
@@ -155,13 +155,13 @@ export default function Header() {
                     {/* Desktop Navigation */}
                     <div className="hidden lg:flex items-center gap-8">
                         {navLinks.map((link) => (
-                            <a
+                            <Link
                                 key={link.href}
                                 href={link.href}
                                 className="text-slate-700 hover:text-slate-900 font-medium transition-colors"
                             >
                                 {link.label}
-                            </a>
+                            </Link>
                         ))}
                     </div>
 
@@ -210,14 +210,14 @@ export default function Header() {
                     <div className="lg:hidden mt-4 pb-4 border-t border-slate-200 pt-4">
                         <div className="flex flex-col gap-4">
                             {navLinks.map((link) => (
-                                <a
+                                <Link
                                     key={link.href}
                                     href={link.href}
                                     className="text-slate-700 hover:text-slate-900 font-medium"
                                     onClick={() => setIsMobileMenuOpen(false)}
                                 >
                                     {link.label}
-                                </a>
+                                </Link>
                             ))}
                             <div className="flex flex-col gap-2 pt-4">
                                 <Link href="/login">

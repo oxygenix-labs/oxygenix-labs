@@ -46,14 +46,14 @@ export default function MaintenanceClarity() {
                     className="text-center mb-16"
                 >
                     <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-4">
-                        Maintenance Costs
+                        Annual Maintenance
                         <br />
                         <span className="bg-gradient-to-r from-oxygen-700 to-fresh-600 bg-clip-text text-transparent">
-                            Fully Transparent
+                            Costs
                         </span>
                     </h2>
                     <p className="text-xl text-slate-600 max-w-3xl mx-auto">
-                        No hidden fees. Here's exactly what it costs to maintain your system annually.
+                        Standard maintenance and AMC pricing for Home Compact model.
                     </p>
                 </motion.div>
 
@@ -113,15 +113,8 @@ export default function MaintenanceClarity() {
                         transition={{ duration: 0.6, delay: 0.2 }}
                         className="bg-gradient-to-br from-oxygen-50 to-fresh-50 rounded-2xl border-2 border-oxygen-300 p-8 md:p-10 relative overflow-hidden"
                     >
-                        {/* Recommended Badge */}
-                        <div className="absolute top-6 right-6">
-                            <span className="px-4 py-2 bg-oxygen-700 text-white text-sm font-bold rounded-full shadow-lg">
-                                RECOMMENDED
-                            </span>
-                        </div>
-
                         <h3 className="text-2xl font-bold text-slate-900 mb-2">Annual Maintenance Contract (AMC)</h3>
-                        <p className="text-slate-700 mb-6">All-inclusive annual plan with priority support</p>
+                        <p className="text-slate-700 mb-6">Annual contract includes all maintenance services</p>
 
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
                             <div>

@@ -53,14 +53,14 @@ export default function Hero() {
                     className="text-center mb-16"
                 >
                     <h1 className="text-5xl md:text-6xl font-bold text-slate-900 mb-6 leading-tight">
-                        Clean Air Solutions
+                        Algae-Based Air
                         <br />
                         <span className="bg-gradient-to-r from-oxygen-700 to-fresh-600 bg-clip-text text-transparent">
-                            for Every Space
+                            Purification Systems
                         </span>
                     </h1>
                     <p className="text-xl text-slate-600 max-w-2xl mx-auto">
-                        Select your space to see products designed for your environment
+                        HEPA filtration combined with photosynthetic oxygen generation. Select your space type to view specifications.
                     </p>
                 </motion.div>
 
@@ -79,8 +79,8 @@ export default function Hero() {
                             transition={{ duration: 0.4, delay: 0.3 + index * 0.1 }}
                             onClick={() => setSelectedSpace(space.id)}
                             className={`group relative p-8 rounded-2xl border-2 transition-all duration-300 ${selectedSpace === space.id
-                                    ? 'border-oxygen-700 bg-gradient-to-br from-oxygen-50 to-fresh-50 shadow-oxygen'
-                                    : 'border-slate-200 bg-white hover:border-oxygen-300 hover:shadow-lg'
+                                ? 'border-oxygen-700 bg-gradient-to-br from-oxygen-50 to-fresh-50 shadow-oxygen'
+                                : 'border-slate-200 bg-white hover:border-oxygen-300 hover:shadow-lg'
                                 }`}
                         >
                             <div className="text-5xl mb-4">{space.icon}</div>
@@ -177,7 +177,7 @@ export default function Hero() {
                         className="text-center py-12"
                     >
                         <p className="text-lg text-slate-500">
-                            Select a space type above to see relevant products
+                            Select a space type to view product specifications
                         </p>
                     </motion.div>
                 )}

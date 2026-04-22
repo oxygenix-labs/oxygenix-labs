@@ -95,10 +95,10 @@ export default function RadicalTransparency() {
                     className="text-center mb-16"
                 >
                     <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-4">
-                        Honest About What We Do
+                        System Capabilities and Limitations
                     </h2>
                     <p className="text-xl text-slate-600 max-w-3xl mx-auto">
-                        We believe in radical transparency. Here's exactly what our products do — and what they don't.
+                        What these systems do and do not do.
                     </p>
                 </motion.div>
 
@@ -117,7 +117,7 @@ export default function RadicalTransparency() {
                                     <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                                 </svg>
                             </div>
-                            <h3 className="text-2xl font-bold text-slate-900">What Our Products Do</h3>
+                            <h3 className="text-2xl font-bold text-slate-900">What They Do</h3>
                         </div>
 
                         <div className="space-y-6">
@@ -156,7 +156,7 @@ export default function RadicalTransparency() {
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                                 </svg>
                             </div>
-                            <h3 className="text-2xl font-bold text-slate-900">What They Do NOT Do</h3>
+                            <h3 className="text-2xl font-bold text-slate-900">What They Do Not Do</h3>
                         </div>
 
                         <div className="space-y-6">
@@ -195,9 +195,9 @@ export default function RadicalTransparency() {
                             <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clipRule="evenodd" />
                         </svg>
                         <div>
-                            <h4 className="font-bold text-slate-900 mb-1">Questions About Capabilities?</h4>
+                            <h4 className="font-bold text-slate-900 mb-1">Technical specifications available</h4>
                             <p className="text-sm text-slate-700">
-                                We're happy to provide detailed technical specifications and answer any questions about what our products can and cannot do. Contact our team for honest, engineering-backed answers.
+                                Contact technical support for detailed specifications and system capabilities documentation.
                             </p>
                         </div>
                     </div>
