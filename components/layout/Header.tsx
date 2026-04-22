@@ -9,6 +9,7 @@ import { getCurrentUser, logout } from '@/lib/auth/mockAuth';
 import { getInitials } from '@/lib/utils/formatting';
 import { useCartStore } from '@/lib/store/cartStore';
 import CartDrawer from '@/components/cart/CartDrawer';
+import Logo from '@/components/ui/Logo';
 
 // Auth-aware buttons component
 function AuthButtons() {
@@ -143,14 +144,7 @@ export default function Header() {
             <nav className="container-premium py-4">
                 <div className="flex items-center justify-between">
                     {/* Logo */}
-                    <Link href="/" className="flex items-center gap-2 group">
-                        <div className="w-10 h-10 bg-gradient-primary-light rounded-lg flex items-center justify-center">
-                            <span className="text-white font-bold text-xl">O</span>
-                        </div>
-                        <span className="text-xl font-bold text-slate-900">
-                            Oxygenix <span className="font-normal text-slate-600">Labs</span>
-                        </span>
-                    </Link>
+                    <Logo size="sm" />
 
                     {/* Desktop Navigation */}
                     <div className="hidden lg:flex items-center gap-8">

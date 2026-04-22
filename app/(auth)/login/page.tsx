@@ -12,6 +12,7 @@ import Input from '@/components/ui/Input';
 import Button from '@/components/ui/Button';
 import GradientText from '@/components/ui/GradientText';
 import Toast from '@/components/ui/Toast';
+import Logo from '@/components/ui/Logo';
 
 export default function LoginPage() {
     const router = useRouter();
@@ -57,10 +58,8 @@ export default function LoginPage() {
                 className="w-full max-w-md"
             >
                 {/* Logo */}
-                <div className="text-center mb-8">
-                    <Link href="/" className="inline-block">
-                        <GradientText className="text-3xl font-bold">OXYGENIX LABS</GradientText>
-                    </Link>
+                <div className="text-center mb-8 flex flex-col items-center">
+                    <Logo size="lg" className="mb-2" />
                     <p className="mt-2 text-slate-600">Sign in to your account</p>
                 </div>
 
